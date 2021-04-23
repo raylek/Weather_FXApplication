@@ -40,7 +40,7 @@ public class Controller {
         button.setOnAction(event -> {
             String getUserCity = city.getText().trim();
             if(!getUserCity.equals("")) {
-                String output = getURLContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&units=metric&appid=d88998097926554b5466facfab7c286b");
+                String output = getURLContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&units=metric&appid={Perosnal key}");
                 if (!output.isEmpty()) {
                     JSONObject obj = new JSONObject(output);
                     temperature.setText("Температура: " + obj.getJSONObject("main").getDouble("temp"));
